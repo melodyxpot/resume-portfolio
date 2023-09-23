@@ -1,0 +1,22 @@
+//
+// Slider //
+//
+.swiper {
+	width: 100%;
+	height: auto;
+}
+
+.swiper-custom-prev, 
+.swiper-custom-next {
+	&:focus {
+		background: transparent;
+		color: black;
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
+}
+.swiper-custom-next {
+	margin-left: 6px;
+}

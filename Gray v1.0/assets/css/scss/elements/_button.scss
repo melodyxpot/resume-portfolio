@@ -1,0 +1,161 @@
+//
+// Buttons //
+//
+a {
+	color: $color-black-07;
+	@include transition(linear 0.1s);
+	text-decoration: none;
+	&:hover {
+		color: black;
+		text-decoration: none;
+	}
+}
+button {
+	background: transparent;
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+}
+a, button {
+	&:focus, &:active {
+		box-shadow: none;
+		outline: 0;
+	}
+}
+
+//
+// Regular Button //
+//
+.button {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	background: $color-black-01;
+	border-radius: 2em;
+	padding: 14px 32px;
+	color: black;
+	font-size: 0.9em;
+	font-family: $font-family-mono;
+	@include transition(ease-out 0.12s);
+	i {
+		margin-right: 8px;
+		font-size: 15px;
+	}
+	&:hover {
+		background: $color-black-02;
+		color: black;
+	}
+	&.button-dark {
+		background: black;
+		color: white;
+		&:hover {
+			background: $color-black-09;
+			color: white;
+		}
+	}
+	&.button-outline-dark {
+		background: transparent;
+		border: 1px dashed black;
+		color: black;
+		&:hover {
+			background: black;
+			color: white;
+		}
+	}
+	&.button-white {
+		background: $color-white-015;
+		color: white;
+		&:hover {
+			background: $color-white-02;
+			color: white;
+		}
+	}
+	&.button-outline-white {
+		background: transparent;
+		border: 1px dashed white;
+		color: white;
+		&:hover {
+			background: white;
+			color: black;
+		}
+	}
+}
+.button-sm { padding: 10px 22px; }
+.button-lg { padding: 16px 42px; }
+
+
+//
+// Circle Button //
+//
+.button-circle {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50%;
+	color: black;
+	text-align: center;
+	@include transition(ease-out 0.12s);
+	i { line-height: 50px; }
+	&:hover {
+		color: $color-primary;
+	}
+	&.button-circle-sm {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		i { line-height: 40px; }
+	}
+	&.button-circle-lg {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		i { line-height: 60px; }
+	}
+}
+
+.button-circle-gray, a.button-circle-gray {
+	background: $color-black-01;
+	border: 0;
+	&:hover, &:focus {
+		background: $color-black-02;
+		color: black;
+	}
+}
+.button-circle-dark, a.button-circle-dark {
+	background: black;
+	border: 0;
+	color: white;
+	&:hover, &:focus {
+		background: $color-black-09;
+		color: white;
+	}
+}
+.button-circle-outline-dark, a.button-circle-outline-dark {
+	background: transparent;
+	border: 1px dashed black;
+	color: black;
+	&:hover, &:focus {
+		background: black;
+		color: white;
+	}
+}
+.button-circle-white, a.button-circle-white {
+	background: $color-white-015;
+	border: 0;
+	color: white;
+	&:hover, &:focus {
+		background: $color-white-02;
+		color: white;
+	}
+}
+.button-circle-outline-white, &.button-circle-outline-white {
+	background: transparent;
+	border: 1px dashed white;
+	color: white;
+	&:hover, &:focus {
+		background: white;
+		color: black;
+	}
+}
