@@ -31,18 +31,20 @@ $(window).on("load", function () {
 });
 
 if ($body.attr("data-preloader") === "true") {
-  $body.append($("<div class='preloader'><div><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></div></div>"));
+  $body.append(
+    $(
+      "<div class='preloader'><div><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></div></div>"
+    )
+  );
 }
-
 
 /*===============================================
   2. Scroll Anchors
 ===============================================*/
-$('a[href^=\\#]').on('click', function(event){     
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top + -24}, 0);
+$("a[href^=\\#]").on("click", function (event) {
+  event.preventDefault();
+  $("html,body").animate({ scrollTop: $(this.hash).offset().top + -24 }, 0);
 });
-
 
 /*===============================================
   3. Toggle Menu
@@ -55,12 +57,11 @@ if (toggleMenu.length) {
   //
   // Open //
   //
-  toggleBtn.on("click", function() {
+  toggleBtn.on("click", function () {
     if (toggleMenu.hasClass("show")) {
       toggleMenu.removeClass("show");
       toggleBtn.removeClass("active");
-    }
-    else {
+    } else {
       toggleMenu.addClass("show");
       toggleBtn.addClass("active");
     }
@@ -68,12 +69,12 @@ if (toggleMenu.length) {
   //
   // Close //
   //
-  toggleClose.on("click", function() {
+  toggleClose.on("click", function () {
     toggleMenu.removeClass("show");
     toggleBtn.removeClass("active");
   });
-  $(document).on("click", function(e) {
-    if ( $(e.target).closest(".toggle-menu, .menu-dots").length === 0 ) {
+  $(document).on("click", function (e) {
+    if ($(e.target).closest(".toggle-menu, .menu-dots").length === 0) {
       if (toggleMenu.hasClass("show")) {
         toggleMenu.removeClass("show");
         toggleBtn.removeClass("active");
@@ -90,16 +91,14 @@ var headerHeight = $("#header").height();
 var sectionNav = $(".section-nav");
 
 if (windowWidth < 992) {
-  $(window).on("scroll", function(){
+  $(window).on("scroll", function () {
     if ($(this).scrollTop() >= headerHeight) {
       sectionNav.addClass("fixed");
-    }
-    else {
+    } else {
       sectionNav.removeClass("fixed");
     }
   });
 }
-
 
 /*===============================================
   5. Background Image
@@ -107,12 +106,11 @@ if (windowWidth < 992) {
 var bgImages = document.querySelectorAll(".bg-image");
 
 if (bgImages) {
-  bgImages.forEach(function(bgImage) {
+  bgImages.forEach(function (bgImage) {
     var bgData = bgImage.getAttribute("data-bg-src");
     bgImage.style.backgroundImage = 'url("' + bgData + '")';
   });
 }
-
 
 /*===============================================
   6. Sliders
@@ -140,8 +138,8 @@ var swiper = new Swiper(".clients-swiper", {
   },
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
-  },
+    disableOnInteraction: false
+  }
 });
 
 var swiper = new Swiper(".testimonial-swiper", {
@@ -166,34 +164,38 @@ var swiper = new Swiper(".testimonial-swiper", {
   },
   navigation: {
     nextEl: ".swiper-custom-next",
-    prevEl: ".swiper-custom-prev",
+    prevEl: ".swiper-custom-prev"
   },
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
-  },
+    disableOnInteraction: false
+  }
 });
-
 
 /*===============================================
   7. Counter
 ===============================================*/
-$(".counter").appear(function() {
-
-  $(this).each(function () {
-    $(this).prop("Counter",0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 2400,
-        easing: "swing",
-        step: function (now) {
-            $(this).text(Math.ceil(now));
-        }
+$(".counter").appear(
+  function () {
+    $(this).each(function () {
+      $(this)
+        .prop("Counter", 0)
+        .animate(
+          {
+            Counter: $(this).text()
+          },
+          {
+            duration: 2400,
+            easing: "swing",
+            step: function (now) {
+              $(this).text(Math.ceil(now));
+            }
+          }
+        );
     });
-  });
-  
-},{accX: 0, accY: -10});
-
+  },
+  { accX: 0, accY: -10 }
+);
 
 /*===============================================
   8. Portfolio Filter
@@ -201,16 +203,15 @@ $(".counter").appear(function() {
 var pGrid = $(".portfolio-grid");
 
 if (pGrid.length) {
-  var mixer = mixitup('.portfolio-grid', {
+  var mixer = mixitup(".portfolio-grid", {
     selectors: {
-        target: '.portfolio-item'
+      target: ".portfolio-item"
     },
     animation: {
-        duration: 250
+      duration: 250
     }
   });
 }
-
 
 /*===============================================
   9. Lightbox
@@ -223,12 +224,12 @@ var $lightboxImage = $(".lightbox-image-box");
 $lightboxImage.each(function () {
   var $this = $(this);
   $this.magnificPopup({
-    type: 'image',
+    type: "image",
     fixedContentPos: false,
     removalDelay: 200,
-    closeOnContentClick: true, 
+    closeOnContentClick: true,
     image: {
-      titleSrc: 'data-image-title'
+      titleSrc: "data-image-title"
     }
   });
 });
@@ -238,7 +239,7 @@ $lightboxImage.each(function () {
 //
 var $lightboxMedia = $(".lightbox-media-box");
 
-$lightboxMedia.each(function() {
+$lightboxMedia.each(function () {
   var $this = $(this);
   $this.magnificPopup({
     type: "iframe",
@@ -248,26 +249,25 @@ $lightboxMedia.each(function() {
     iframe: {
       patterns: {
         youtube: {
-          index: 'youtube.com/',
-          id: 'v=',
-          src: '//www.youtube.com/embed/%id%?autoplay=1&rel=0'
+          index: "youtube.com/",
+          id: "v=",
+          src: "//www.youtube.com/embed/%id%?autoplay=1&rel=0"
         },
-          vimeo: {
-          index: 'vimeo.com/',
-          id: '/',
-          src: '//player.vimeo.com/video/%id%?autoplay=1'
+        vimeo: {
+          index: "vimeo.com/",
+          id: "/",
+          src: "//player.vimeo.com/video/%id%?autoplay=1"
         }
       },
-      srcAction: "iframe_src" 
+      srcAction: "iframe_src"
     }
   });
 });
 
-
 /*===============================================
   10. Contact Form
 ===============================================*/
-$("#contactform").on("submit", function(e) {
+$("#contactform").on("submit", function (e) {
   var name = $("#name").val();
   var email = $("#email").val();
   var subject = $("#subject").val();
@@ -284,20 +284,26 @@ $("#contactform").on("submit", function(e) {
   }
   if (message === "") {
     $("#message").addClass("error-color");
-  }
-
-  else {
+  } else {
     $.ajax({
-      url:"assets/php/contact-form.php",
-      data:$(this).serialize(),
-      type:"POST",
-      success:function(data){
+      url: "assets/php/contact-form.php",
+      data: JSON.stringify({
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        targetEmail: USER.contact.email
+      }),
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function (data) {
         $("#success").addClass("show-result"); //=== Show Success Message==
-        $("#contactform").each(function(){
+        $("#contactform").each(function () {
           this.reset();
         });
       },
-      error:function(data){
+      error: function (data) {
         $("#error").addClass("show-result"); //===Show Error Message====
       }
     });
@@ -308,21 +314,20 @@ $("#contactform").on("submit", function(e) {
   e.preventDefault();
 });
 
-
 /*===============================================
   11. Google Maps
 ===============================================*/
 var mapCanvas = $(".gmap");
 
 if (mapCanvas.length) {
-  var m,divId,initLatitude, initLongitude, map;
+  var m, divId, initLatitude, initLongitude, map;
 
   for (var i = 0; i < mapCanvas.length; i++) {
     m = mapCanvas[i];
 
     initLatitude = m.dataset["latitude"];
     initLongitude = m.dataset["longitude"];
-    divId = "#"+ m["id"];
+    divId = "#" + m["id"];
 
     map = new GMaps({
       el: divId,
@@ -331,13 +336,13 @@ if (mapCanvas.length) {
       zoom: 16,
       scrollwheel: false,
       styles: [
-          /* style your map at https://snazzymaps.com/editor and paste JSON here */
+        /* style your map at https://snazzymaps.com/editor and paste JSON here */
       ]
     });
 
     map.addMarker({
-      lat : initLatitude,
-      lng : initLongitude
+      lat: initLatitude,
+      lng: initLongitude
     });
   }
 }

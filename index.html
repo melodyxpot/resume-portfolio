@@ -48,6 +48,11 @@
       rel="stylesheet"
     />
     <link href="assets/plugins/fontawesome/css/all.css" rel="stylesheet" />
+    <!-- Calendly -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
   </head>
   <body data-preloader="true">
     <!-- Toggle Menu -->
@@ -232,7 +237,7 @@
                       data-rjs="2"
                       id="user-avatar"
                     />
-                    <div class="hero-avatar-text">
+                    <div class="hero-avatar-text" id="user-name-typer">
                       <span
                         class="typer text-white"
                         id="typer1"
@@ -284,8 +289,9 @@
                     <div class="d-inline-block">
                       <h1
                         class="font-family-mono fw-semi-bold stroke-text display-4"
+                        id="user-exp-years"
                       >
-                        <span class="counter" id="user-exp-years">10</span>
+                        <span class="counter">10</span>
                       </h1>
                     </div>
                     <div class="d-inline-block ps-2">
@@ -299,8 +305,9 @@
                     <div class="d-inline-block">
                       <h1
                         class="font-family-mono fw-semi-bold stroke-text display-4"
+                        id="user-working-hours"
                       >
-                        <span class="counter" id="user-working-hours">20</span>
+                        <span class="counter">20</span>
                       </h1>
                     </div>
                     <div class="d-inline-block ps-2">
@@ -315,10 +322,9 @@
                     <div class="d-inline-block">
                       <h1
                         class="font-family-mono fw-semi-bold stroke-text display-4"
+                        id="user-project-numbers"
                       >
-                        <span class="counter" id="user-project-numbers"
-                          >90</span
-                        >
+                        <span class="counter">90</span>
                       </h1>
                     </div>
                     <div class="d-inline-block ps-2">
@@ -341,21 +347,21 @@
                     Portfolio
                   </h6>
                   <h1>My Latest Works</h1>
-                  <p>
+                  <p id="user-portfolio-summary">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do eiusmod tempor incididunt ut labore
                   </p>
                 </div>
               </div>
               <div class="filter mt-4 mt-lg-5 mb-3">
-                <ul>
+                <ul id="user-portfolio-categories">
                   <li data-filter="all">Show All</li>
                   <li data-filter=".category-1">First</li>
                   <li data-filter=".category-2">Second</li>
                 </ul>
               </div>
               <!-- end Portfolio Filter -->
-              <div class="row g-4 portfolio-grid">
+              <div class="row g-4 portfolio-grid" id="user-portfolio-projects">
                 <!-- Portfolio Item 1 -->
                 <div class="col-12 col-xl-6 portfolio-item category-1">
                   <div class="portfolio-box">
@@ -621,10 +627,10 @@
                     Resume
                   </h6>
                   <h1>Education & Experience</h1>
-                  <p>
+                  <!-- <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do eiusmod tempor incididunt ut labore
-                  </p>
+                  </p> -->
                 </div>
               </div>
               <div class="row g-4 g-lg-5 mt-0">
@@ -695,10 +701,10 @@
                     Blog
                   </h6>
                   <h1>Latest Blog Posts</h1>
-                  <p>
+                  <!-- <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                     sed do eiusmod tempor incididunt ut labore
-                  </p>
+                  </p> -->
                 </div>
               </div>
               <div class="mt-4 mt-lg-5" id="user-blogs">
@@ -737,10 +743,7 @@
                     Get In Touch
                   </h6>
                   <h1>Let's Connect</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore
-                  </p>
+                  <p>If you want to contact me, just call me or email.</p>
                   <ul class="list-inline-pills mt-4" id="contact-info-list">
                     <li>Phone: +976 12 34 9999</li>
                     <li>Email: flatheme@gmail.com</li>
@@ -806,12 +809,12 @@
             <!-- end Contact section -->
 
             <!-- Google Maps -->
-            <div
+            <!-- <div
               id="map1"
               class="gmap gmap-sm mt-4 border-radius box-shadow"
               data-latitude="51.513569"
               data-longitude="-0.123443"
-            ></div>
+            ></div> -->
           </div>
           <!-- end sections-wrapper -->
         </div>
@@ -829,6 +832,14 @@
       <div class="bg-line-4"></div>
     </div>
     <!-- end Background Vertical lines -->
+
+    <!-- Javascript calendly meeting -->
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+    <!-- Javascript calendly meeting -->
 
     <!-- JavaScripts -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>

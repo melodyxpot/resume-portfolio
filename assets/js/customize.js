@@ -1,16 +1,32 @@
 const USER = DAJOUR;
 
 $(window).on("load", function () {
+  if (isEmpty(USER.portfolio)) $("#portfolio").hide();
+  if (isEmpty(USER.portfolio.summary)) $("#user-portfolio-summary").hide();
+  if (isEmpty(USER.services)) $("#services").hide();
   if (isEmpty(USER.testimonials)) $("#testimonial").hide();
   if (isEmpty(USER.resume)) $("#resume").hide();
   if (isEmpty(USER.clients)) $("#client").hide();
   if (isEmpty(USER.blogs)) $("#blog").hide();
+
+  $("head link[rel='shortcut icon']").attr("href", USER.avatar);
+  $("title").text(
+    `${USER.name.firstName} ${USER.name.lastName} - ${USER.role}`
+  );
 
   $("#name").html(
     `${USER.name.firstName} <span class='stroke-text'>${USER.name.lastName}</span>`
   );
 
   $("#user-avatar").attr("src", USER.avatar);
+  // $("#user-name-typer").html(`<span
+  //     class="typer text-white"
+  //     id="typer1"
+  //     data-words="Hi There!, I'm ${USER.name.firstName}"
+  //     data-delay="50"
+  //     data-deleteDelay="1500"
+  //   ></span
+  //   ><span class="cursor" data-owner="typer1"></span>`);
 
   $("#user-role").html(USER.role);
 
@@ -46,7 +62,6 @@ $(window).on("load", function () {
       )
       .join("")
   );
-  $("#typer1").attr("data-words", `Hi There!, I'm ${USER.name.firstName}`);
 
   $("#user-skills").html(
     USER.skills
@@ -63,10 +78,56 @@ $(window).on("load", function () {
 
   $("#user-summary").html(USER.summary);
 
-  console.log($("#user-exp-years").text());
-  $("#user-exp-years").text(USER.statistic.experience);
-  $("#user-working-hours").text(USER.statistic.working);
-  $("#user-project-numbers").text(USER.statistic.projects);
+  $("#user-exp-years").html(
+    `<span class="counter">${USER.statistic.experience}</span>`
+  );
+  $("#user-working-hours").html(
+    `<span class="counter">${USER.statistic.working}</span>`
+  );
+  $("#user-project-numbers").html(
+    `<span class="counter">${USER.statistic.projects}</span>`
+  );
+
+  $("#user-portfolio-categories").html(
+    `<li data-filter="all">Show All</li>${USER.portfolio.categories
+      .map(
+        cat =>
+          '<li data-filter=".category-' +
+          cat.toLocaleLowerCase() +
+          '">' +
+          cat +
+          "</li>"
+      )
+      .join("")}`
+  );
+
+  $("#user-portfolio-summary").text(USER.portfolio.summary);
+
+  $("#user-portfolio-projects").html(
+    USER.portfolio.projects
+      .map(
+        project => `<div class="col-12 col-xl-6 portfolio-item ${project.category
+          .map(cat => "category-" + cat.toLowerCase())
+          .join(" ")}">
+        <div class="portfolio-box">
+          <!-- Image -->
+          <img
+            src="${project.image}"
+            alt="${project.id}"
+            data-rjs="2"
+          />
+          <!-- Category -->
+          <span class="portfolio-category">${project.category}</span>
+          <!-- Caption -->
+          <div class="portfolio-caption">
+            <h1><a href="${project.link}">${project.title}</a></h1>
+          </div>
+        </div>
+        <!-- end portfolio-box -->
+      </div>`
+      )
+      .join("")
+  );
 
   $("#user-educations").html(
     USER.resume.educations
@@ -167,4 +228,11 @@ $(window).on("load", function () {
       </div>`
     )
   );
+
+  Calendly.initBadgeWidget({
+    url: `https://calendly.com/${USER.contact.calendly}/30min`,
+    text: "Meet Me with Calendly",
+    color: "#0069ff",
+    textColor: "#ffffff"
+  });
 });
