@@ -9,6 +9,26 @@ $(window).on("load", function () {
   if (isEmpty(USER.clients)) $("#client").hide();
   if (isEmpty(USER.blogs)) $("#blog").hide();
 
+  // -------------- Implement SEO -------------- //
+  $("head meta[name='description']").html(USER.description);
+  $("head meta[name='keywords']").html(
+    `${USER.name.firstName}, ${USER.name.lastName}, ${USER.role}, Portfolio, developer`
+  );
+  $("head meta[property='og:title']").html(
+    `${USER.name.firstName} | ${USER.role}`
+  );
+  $("head meta[property='og:description']").html(USER.description);
+  $("head meta[property='og:image']").html(USER.avatar);
+  $("head meta[property='og:url']").html(`https://dajour.melodyxpot.com`);
+
+  $("head meta[property='twitter:title']").html(
+    `${USER.name.firstName} | ${USER.role}`
+  );
+  $("head meta[property='twitter:description']").html(USER.description);
+  $("head meta[property='twitter:image']").html(USER.avatar);
+  $("head meta[property='twitter:card']").html(USER.banner);
+  // ------------------------------------------- //
+
   $("head link[rel='shortcut icon']").attr("href", USER.avatar);
   $("title").text(
     `${USER.name.firstName} ${USER.name.lastName} - ${USER.role}`
