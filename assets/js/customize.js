@@ -8,25 +8,33 @@ $(window).on("load", function () {
   if (isEmpty(USER.resume)) $("#resume").hide();
   if (isEmpty(USER.clients)) $("#client").hide();
   if (isEmpty(USER.blogs)) $("#blog").hide();
-
   // -------------- Implement SEO -------------- //
-  $("head meta[name='description']").html(USER.description);
-  $("head meta[name='keywords']").html(
+  $("head meta[name='description']").attr("content", USER.description);
+  $("head meta[name='keywords']").attr(
+    "content",
     `${USER.name.firstName}, ${USER.name.lastName}, ${USER.role}, Portfolio, developer`
   );
-  $("head meta[property='og:title']").html(
+  $("head meta[property='og:title']").attr(
+    "content",
     `${USER.name.firstName} | ${USER.role}`
   );
-  $("head meta[property='og:description']").html(USER.description);
-  $("head meta[property='og:image']").html(USER.avatar);
-  $("head meta[property='og:url']").html(`https://dajour.melodyxpot.com`);
+  $("head meta[property='og:description']").attr("content", USER.description);
+  $("head meta[property='og:image']").attr("content", USER.avatar);
+  $("head meta[property='og:url']").attr(
+    "content",
+    `https://dajour.melodyxpot.com`
+  );
 
-  $("head meta[property='twitter:title']").html(
+  $("head meta[property='twitter:title']").attr(
+    "content",
     `${USER.name.firstName} | ${USER.role}`
   );
-  $("head meta[property='twitter:description']").html(USER.description);
-  $("head meta[property='twitter:image']").html(USER.avatar);
-  $("head meta[property='twitter:card']").html(USER.banner);
+  $("head meta[property='twitter:description']").attr(
+    "content",
+    USER.description
+  );
+  $("head meta[property='twitter:image']").attr("content", USER.avatar);
+  $("head meta[property='twitter:card']").attr("content", USER.banner);
   // ------------------------------------------- //
 
   $("head link[rel='shortcut icon']").attr("href", USER.avatar);
