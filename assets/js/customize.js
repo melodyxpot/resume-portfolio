@@ -259,7 +259,7 @@ $(window).on("load", function () {
 
   Calendly.initBadgeWidget({
     url: `https://calendly.com/${USER.contact.calendly}/30min`,
-    text: "Meet Me with Calendly",
+    text: "Meet Me in Calendly",
     color: "#0069ff",
     textColor: "#ffffff"
   });
