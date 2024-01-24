@@ -34,7 +34,7 @@ const DAJOUR = {
     }
   ],
   statistic: {
-    experience: 4,
+    experience: 5,
     working: 40,
     projects: 30
   },
