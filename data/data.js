@@ -43,13 +43,21 @@ const DAJOUR = {
   socials: [
     {
       id: "github",
+      icon: "github",
       title: "GitHub",
       link: "https://github.com/melodyxpot"
     },
     {
       id: "linkedin",
+      icon: "linkedin",
       title: "Linkedin",
       link: "https://linkedin.com/in/dajour-walker"
+    },
+    {
+      id: "resume",
+      icon: "file-text-fill",
+      title: "Resume",
+      link: "https://drive.google.com/file/d/1PA7LC4BDqFLyzFzEoMov6Ua2L6hY2i59/view?usp=sharing"
     }
   ],
 
@@ -93,7 +101,7 @@ const DAJOUR = {
       content: "",
       avatar:
         "https://directory.msmary.edu/people/people-photos/joshua-bonner_425px.jpg",
-      name: "Jorhua Bonner",
+      name: "Johua Bonner",
       role: "Founder in BerryGoodMedia"
     }
   ],

@@ -61,9 +61,9 @@ $(window).on("load", function () {
   $("#social-links").html(
     USER.socials
       .map(
-        item =>
+        (item) =>
           `<li>
-        <a class="link-decoration" href="${item.link}">${item.title}</a>
+        <a class="link-decoration" href="${item.link}" target="_blank">${item.title}</a>
       </li>`
       )
       .join("")
@@ -81,11 +81,12 @@ $(window).on("load", function () {
   $("#social-link-icons").html(
     USER.socials
       .map(
-        item => `<li>
+        (item) => `<li>
           <a
             class="button-circle button-circle-sm button-circle-white"
             href="${item.link}"
-            ><i class="bi bi-${item.id}"></i></a>
+            target="_blank"
+            ><i class="bi bi-${item.icon}"></i></a>
         </li>`
       )
       .join("")
@@ -94,7 +95,7 @@ $(window).on("load", function () {
   $("#user-skills").html(
     USER.skills
       .map(
-        skill => `<li>
+        (skill) => `<li>
         <i class="fa-brands ${skill.icon} pe-2"></i> ${skill.name}
         <div class="d-inline-block font-family-mono font-small">
           (<span class="counter">${skill.percent}</span>%)
@@ -119,7 +120,7 @@ $(window).on("load", function () {
   $("#user-portfolio-categories").html(
     `<li data-filter="all">Show All</li>${USER.portfolio.categories
       .map(
-        cat =>
+        (cat) =>
           '<li data-filter=".category-' +
           cat.toLocaleLowerCase() +
           '">' +
@@ -134,8 +135,10 @@ $(window).on("load", function () {
   $("#user-portfolio-projects").html(
     USER.portfolio.projects
       .map(
-        project => `<div class="col-12 col-xl-6 portfolio-item ${project.category
-          .map(cat => "category-" + cat.toLowerCase())
+        (
+          project
+        ) => `<div class="col-12 col-xl-6 portfolio-item ${project.category
+          .map((cat) => "category-" + cat.toLowerCase())
           .join(" ")}">
         <div class="portfolio-box">
           <!-- Image -->
@@ -160,7 +163,7 @@ $(window).on("load", function () {
   $("#user-educations").html(
     USER.resume.educations
       .map(
-        item => `<div class="resume-box">
+        (item) => `<div class="resume-box">
         <span class="resume-date">${item.date}</span>
         <h5 class="fw-medium">${item.title}</h5>
         <span>@ ${item.school}</span>
@@ -172,7 +175,7 @@ $(window).on("load", function () {
   $("#user-employments").html(
     USER.resume.employments
       .map(
-        item => `<div class="resume-box">
+        (item) => `<div class="resume-box">
         <span class="resume-date">${item.date}</span>
         <h5 class="fw-medium">${item.title}</h5>
         <span>@ ${item.company}</span>  
@@ -184,7 +187,7 @@ $(window).on("load", function () {
   $("#user-clients").html(
     USER.clients
       .map(
-        item => `<div class="swiper-slide client-box">
+        (item) => `<div class="swiper-slide client-box">
         <a href="${item.link}">
           <img
             src="${item.logo}"
@@ -200,7 +203,7 @@ $(window).on("load", function () {
 
   $("#user-blogs").html(
     USER.blogs.map(
-      item => `<div class="blog-post-box">
+      (item) => `<div class="blog-post-box">
       <div class="blog-post-img">
         <a href="${item.link}">
           <img src="${item.image}" alt="${item.id}" />
@@ -225,7 +228,7 @@ $(window).on("load", function () {
 
   $("#user-testimonials").html(
     USER.testimonials.map(
-      client => `<div class="swiper-slide">
+      (client) => `<div class="swiper-slide">
         <div class="testimonial-box">
           <div class="d-block text-yellow mb-3">
           ${Array.from(
