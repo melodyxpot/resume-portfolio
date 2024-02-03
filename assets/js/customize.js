@@ -1,13 +1,38 @@
 const USER = DAJOUR;
 
 $(window).on("load", function () {
-  if (isEmpty(USER.portfolio)) $("#portfolio").hide();
-  if (isEmpty(USER.portfolio.summary)) $("#user-portfolio-summary").hide();
-  if (isEmpty(USER.services)) $("#services").hide();
-  if (isEmpty(USER.testimonials)) $("#testimonial").hide();
-  if (isEmpty(USER.resume)) $("#resume").hide();
-  if (isEmpty(USER.clients)) $("#client").hide();
-  if (isEmpty(USER.blogs)) $("#blog").hide();
+  console.log("1231232313");
+  Calendly.initBadgeWidget({
+    url: `https://calendly.com/${USER.contact.calendly}/project-discuss`,
+    text: "Meet me in Calendly",
+    color: "#000000",
+    textColor: "#ffffff",
+    branding: undefined
+  });
+
+  if (isEmpty(USER.portfolio)) {
+    $("#portfolio").hide();
+    $("#nav-portfolio").hide();
+  }
+  if (isEmpty(USER.portfolio.summary)) {
+    $("#user-portfolio-summary").hide();
+  }
+  if (isEmpty(USER.services)) {
+    $("#services").hide();
+    $("#nav-services").hide();
+  }
+  if (isEmpty(USER.testimonials)) {
+    $("#testimonial").hide();
+    $("#nav-testimonial").hide();
+  }
+  if (isEmpty(USER.resume)) {
+    $("#resume").hide();
+    $("#nav-resume").hide();
+  }
+  if (isEmpty(USER.blogs)) {
+    $("#blog").hide();
+    $("#nav-blog").hide();
+  }
   // -------------- Implement SEO -------------- //
   $("head meta[name='description']").attr("content", USER.description);
   $("head meta[name='keywords']").attr(
@@ -47,14 +72,6 @@ $(window).on("load", function () {
   );
 
   $("#user-avatar").attr("src", USER.avatar);
-  // $("#user-name-typer").html(`<span
-  //     class="typer text-white"
-  //     id="typer1"
-  //     data-words="Hi There!, I'm ${USER.name.firstName}"
-  //     data-delay="50"
-  //     data-deleteDelay="1500"
-  //   ></span
-  //   ><span class="cursor" data-owner="typer1"></span>`);
 
   $("#user-role").html(USER.role);
 
@@ -70,9 +87,9 @@ $(window).on("load", function () {
   );
 
   $("#contact-info-list").html(`
-    <li>Phone: ${USER.contact.phone}</li>
-    <li>Email: ${USER.contact.email}</li>
-    <li>Address: ${USER.contact.address}</li>
+    ${USER.contact.phone ? `<li>Phone: ${USER.contact.phone}</li>` : ""}
+    ${USER.contact.email ? `<li>Email: ${USER.contact.email}</li>` : ""}
+    ${USER.contact.address ? `<li>Address: ${USER.contact.address}</li>` : ""}
   `);
 
   $("#phone-info").html(USER.contact.phone);
@@ -259,11 +276,4 @@ $(window).on("load", function () {
       </div>`
     )
   );
-
-  Calendly.initBadgeWidget({
-    url: `https://calendly.com/${USER.contact.calendly}/30min`,
-    text: "Meet Me in Calendly",
-    color: "#0069ff",
-    textColor: "#ffffff"
-  });
 });

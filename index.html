@@ -25,24 +25,6 @@
     <!-- Favicon -->
     <link href="assets/images/favicon.png" rel="shortcut icon" />
     <!-- CSS -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-		<link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      rel="stylesheet"
-    /> -->
     <link href="assets/css/theme.css" rel="stylesheet" />
     <link
       rel="stylesheet"
@@ -104,16 +86,6 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="mt-4 mt-lg-5">
-        <ul class="list-circle">
-          <li>
-            <a class="mono-heading link-decoration" href="#">Link item</a>
-          </li>
-          <li>
-            <a class="mono-heading link-decoration" href="#">Link item</a>
-          </li>
-        </ul>
-      </div> -->
       <div class="tm-bottom">
         <p>&copy; 2024 @copyright</p>
       </div>
@@ -131,20 +103,7 @@
               <ul
                 class="list-inline d-inline-block mono-heading fw-medium"
                 id="social-links"
-              >
-                <li>
-                  <a class="link-decoration" href="#">FB</a>
-                </li>
-                <li>
-                  <a class="link-decoration" href="#">TW</a>
-                </li>
-                <li>
-                  <a class="link-decoration" href="#">IG</a>
-                </li>
-                <li>
-                  <a class="link-decoration" href="#">In</a>
-                </li>
-              </ul>
+              ></ul>
               <!-- Toggle Menu Button -->
               <button class="menu-dots">
                 <span></span>
@@ -173,42 +132,42 @@
           <div class="nav-wrapper">
             <div class="section-nav">
               <ul class="nav">
-                <li class="nav-item">
+                <li class="nav-item" id="nav-about">
                   <a class="nav-link" href="#about">
                     <span class="nav-link-desktop">About Me</span>
                     <span class="nav-link-mobile">A</span>
                     <span class="nav-circle"></span>
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">
-                    <span class="nav-link-desktop">Portfolio</span>
-                    <span class="nav-link-mobile">P</span>
-                    <span class="nav-circle"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#services">
-                    <span class="nav-link-desktop">Services</span>
-                    <span class="nav-link-mobile">S</span>
-                    <span class="nav-circle"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#testimonial">
-                    <span class="nav-link-desktop">Testimonial</span>
-                    <span class="nav-link-mobile">T</span>
-                    <span class="nav-circle"></span>
-                  </a>
-                </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav-resume">
                   <a class="nav-link" href="#resume">
                     <span class="nav-link-desktop">Resume</span>
                     <span class="nav-link-mobile">R</span>
                     <span class="nav-circle"></span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" id="nav-portfolio">
+                  <a class="nav-link" href="#portfolio">
+                    <span class="nav-link-desktop">Portfolio</span>
+                    <span class="nav-link-mobile">P</span>
+                    <span class="nav-circle"></span>
+                  </a>
+                </li>
+                <li class="nav-item" id="nav-services">
+                  <a class="nav-link" href="#services">
+                    <span class="nav-link-desktop">Services</span>
+                    <span class="nav-link-mobile">S</span>
+                    <span class="nav-circle"></span>
+                  </a>
+                </li>
+                <li class="nav-item" id="nav-testimonial">
+                  <a class="nav-link" href="#testimonial">
+                    <span class="nav-link-desktop">Testimonial</span>
+                    <span class="nav-link-mobile">T</span>
+                    <span class="nav-circle"></span>
+                  </a>
+                </li>
+                <li class="nav-item" id="nav-blog">
                   <a class="nav-link" href="#blog">
                     <span class="nav-link-desktop">Blog</span>
                     <span class="nav-link-mobile">B</span>
@@ -352,107 +311,6 @@
             <!-- end section-box -->
             <!-- end About section -->
 
-            <!-- Portfolio section -->
-            <div class="section-box mt-4" id="portfolio">
-              <div class="row">
-                <div class="col-12 col-md-10 col-xl-8">
-                  <h6 class="title-heading mb-3" data-backdrop-text="Portfolio">
-                    Portfolio
-                  </h6>
-                  <h1>My Latest Works</h1>
-                  <p id="user-portfolio-summary">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore
-                  </p>
-                </div>
-              </div>
-              <div class="filter mt-4 mt-lg-5 mb-3">
-                <ul id="user-portfolio-categories">
-                  <li data-filter="all">Show All</li>
-                  <li data-filter=".category-1">First</li>
-                  <li data-filter=".category-2">Second</li>
-                </ul>
-              </div>
-              <!-- end Portfolio Filter -->
-              <div class="row g-4 portfolio-grid" id="user-portfolio-projects">
-                <!-- Portfolio Item 1 -->
-                <div class="col-12 col-xl-6 portfolio-item category-1">
-                  <div class="portfolio-box">
-                    <!-- Image -->
-                    <img
-                      src="assets/images/portfolio-img.jpg"
-                      alt=""
-                      data-rjs="2"
-                    />
-                    <!-- Category -->
-                    <span class="portfolio-category">Category</span>
-                    <!-- Caption -->
-                    <div class="portfolio-caption">
-                      <h1><a href="#">Project Title</a></h1>
-                    </div>
-                  </div>
-                  <!-- end portfolio-box -->
-                </div>
-                <!-- Portfolio Item 2 -->
-                <div class="col-12 col-xl-6 portfolio-item category-2">
-                  <div class="portfolio-box">
-                    <!-- Image -->
-                    <img
-                      src="assets/images/portfolio-img.jpg"
-                      alt=""
-                      data-rjs="2"
-                    />
-                    <!-- Category -->
-                    <span class="portfolio-category">Category</span>
-                    <!-- Caption -->
-                    <div class="portfolio-caption">
-                      <h1><a href="#">Project Title</a></h1>
-                    </div>
-                  </div>
-                  <!-- end portfolio-box -->
-                </div>
-                <!-- Portfolio Item 3 -->
-                <div class="col-12 col-xl-6 portfolio-item category-1">
-                  <div class="portfolio-box">
-                    <!-- Image -->
-                    <img
-                      src="assets/images/portfolio-img.jpg"
-                      alt=""
-                      data-rjs="2"
-                    />
-                    <!-- Category -->
-                    <span class="portfolio-category">Category</span>
-                    <!-- Caption -->
-                    <div class="portfolio-caption">
-                      <h1><a href="#">Project Title</a></h1>
-                    </div>
-                  </div>
-                  <!-- end portfolio-box -->
-                </div>
-                <!-- Portfolio Item 4 -->
-                <div class="col-12 col-xl-6 portfolio-item category-2">
-                  <div class="portfolio-box">
-                    <!-- Image -->
-                    <img
-                      src="assets/images/portfolio-img.jpg"
-                      alt=""
-                      data-rjs="2"
-                    />
-                    <!-- Category -->
-                    <span class="portfolio-category">Category</span>
-                    <!-- Caption -->
-                    <div class="portfolio-caption">
-                      <h1><a href="#">Project Title</a></h1>
-                    </div>
-                  </div>
-                  <!-- end portfolio-box -->
-                </div>
-              </div>
-              <!-- end row -->
-            </div>
-            <!-- end section-box -->
-            <!-- end Portfolio section -->
-
             <!-- Services section -->
             <div class="section-box mt-4" id="services">
               <div class="row">
@@ -588,43 +446,7 @@
               </div>
               <!-- end row -->
               <div class="swiper testimonial-swiper mt-4">
-                <div class="swiper-wrapper" id="user-testimonials">
-                  <!-- Swiper item 1 -->
-                  <div class="swiper-slide">
-                    <div class="testimonial-box">
-                      <div class="d-block text-yellow mb-3">
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                        <i class="bi bi-star-fill"></i>
-                      </div>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Aenean massa. Cum sociis natoque penatibus et
-                        magnis
-                      </p>
-                    </div>
-                    <div class="d-flex align-items-center mt-3">
-                      <div class="d-inline-block me-3">
-                        <img
-                          class="img-mask-avatar-sm"
-                          src="assets/images/testimonial-avatar.jpg"
-                          alt=""
-                          data-rjs="2"
-                        />
-                      </div>
-                      <div class="d-inline-block">
-                        <h5 class="fw-medium m-0 line-height-140">
-                          Sandra Radford
-                        </h5>
-                        <span class="font-small fw-normal"
-                          >Project Manager</span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="swiper-wrapper" id="user-testimonials"></div>
                 <!-- end swiper-wrapper -->
               </div>
               <!-- end swiper -->
@@ -683,28 +505,52 @@
             <!-- end section-box -->
             <!-- end Resume section -->
 
-            <!-- Clients section -->
-            <div class="section-box mt-4" id="client">
-              <h6 class="title-heading mb-4" data-backdrop-text="Clients">
-                My Awesome Clients
-              </h6>
-              <div class="swiper clients-swiper">
-                <div class="swiper-wrapper" id="user-clients">
-                  <!-- Client box -->
-                  <div class="swiper-slide client-box">
-                    <a href="#">
-                      <img
-                        src="assets/images/client-logo.jpg"
-                        alt=""
-                        data-rjs="2"
-                      />
-                    </a>
-                  </div>
+            <!-- Portfolio section -->
+            <div class="section-box mt-4" id="portfolio">
+              <div class="row">
+                <div class="col-12 col-md-10 col-xl-8">
+                  <h6 class="title-heading mb-3" data-backdrop-text="Portfolio">
+                    Portfolio
+                  </h6>
+                  <h1>My Latest Works</h1>
+                  <p id="user-portfolio-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore
+                  </p>
                 </div>
               </div>
+              <!-- <div class="filter mt-4 mt-lg-5 mb-3">
+                <ul id="user-portfolio-categories">
+                  <li data-filter="all">Show All</li>
+                  <li data-filter=".category-1">First</li>
+                  <li data-filter=".category-2">Second</li>
+                </ul>
+              </div> -->
+              <!-- end Portfolio Filter -->
+              <div class="row g-4 portfolio-grid" id="user-portfolio-projects">
+                <!-- Portfolio Item 1 -->
+                <div class="col-12 col-xl-6 portfolio-item category-1">
+                  <div class="portfolio-box">
+                    <!-- Image -->
+                    <img
+                      src="assets/images/portfolio-img.jpg"
+                      alt=""
+                      data-rjs="2"
+                    />
+                    <!-- Category -->
+                    <span class="portfolio-category">Category</span>
+                    <!-- Caption -->
+                    <div class="portfolio-caption">
+                      <h1><a href="#">Project Title</a></h1>
+                    </div>
+                  </div>
+                  <!-- end portfolio-box -->
+                </div>
+              </div>
+              <!-- end row -->
             </div>
             <!-- end section-box -->
-            <!-- end Clients section -->
+            <!-- end Portfolio section -->
 
             <!-- Blog section -->
             <div class="section-box mt-4" id="blog">
@@ -755,13 +601,12 @@
                   <h6 class="title-heading mb-3" data-backdrop-text="Contact">
                     Get In Touch
                   </h6>
-                  <h1>Let's Connect</h1>
+                  <h1>Reach Me</h1>
                   <p>If you want to contact me, just call me or email.</p>
-                  <ul class="list-inline-pills mt-4" id="contact-info-list">
-                    <li>Phone: +976 12 34 9999</li>
-                    <li>Email: flatheme@gmail.com</li>
-                    <li>Address: 121 King St, Melbourne VIC 3000</li>
-                  </ul>
+                  <ul
+                    class="list-inline-pills mt-4"
+                    id="contact-info-list"
+                  ></ul>
                 </div>
               </div>
               <!-- end row -->
@@ -847,6 +692,7 @@
     <!-- end Background Vertical lines -->
 
     <!-- Javascript calendly meeting -->
+
     <script
       src="https://assets.calendly.com/assets/external/widget.js"
       type="text/javascript"
