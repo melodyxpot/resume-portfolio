@@ -168,7 +168,9 @@ $(window).on("load", function () {
           <span class="portfolio-category">${project.category}</span>
           <!-- Caption -->
           <div class="portfolio-caption">
-            <h1><a href="${project.link}">${project.title}</a></h1>
+            <h1><a href="${project.link}" target="_blank">${
+          project.title
+        }</a></h1>
           </div>
         </div>
         <!-- end portfolio-box -->
