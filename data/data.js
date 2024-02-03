@@ -52,7 +52,7 @@ const DAJOUR = {
       id: "resume",
       icon: "file-text-fill",
       title: "Resume",
-      link: "https://drive.google.com/file/d/1U9lri5hgDcS1zCbKFQzZ9Z5xF0Mx8mWS/view?usp=sharing"
+      link: "https://drive.google.com/file/d/1PNVLyHgK7OXYZPTURI34DTq4dMzxY2rw/view?usp=drive_link"
     }
   ],
 
