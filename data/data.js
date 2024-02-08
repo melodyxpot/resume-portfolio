@@ -129,7 +129,7 @@ const DAJOUR = {
       },
       {
         title: "Full Stack Developer",
-        company: "Maze.Guru",
+        company: "World Wide Technology",
         date: "2022 - 2023"
       }
     ]
