@@ -4,7 +4,7 @@ const DAJOUR = {
     lastName: "Walker"
   },
   avatar:
-    "https://lh3.googleusercontent.com/a/ACg8ocJWPJnDhV3ygj0MDwT2Rbp2yiWagUDvJrI9U8ZvHtYcvg=s288-c-no",
+    "https://lh3.googleusercontent.com/a/ACg8ocJlMEl2resW3VNvwGT21_OTJLhDDNuFL3rgWHrpS-3Arg=s288-c-no",
   banner:
     "https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-band-concert-background-image_264964.jpg",
   description:
@@ -52,7 +52,7 @@ const DAJOUR = {
       id: "resume",
       icon: "file-text-fill",
       title: "Resume",
-      link: "https://drive.google.com/file/d/1PNVLyHgK7OXYZPTURI34DTq4dMzxY2rw/view?usp=drive_link"
+      link: "https://drive.google.com/file/d/1duToIYgfSe2P5wq24tgrs5H3CShJn2KD/view?usp=drive_link"
     }
   ],
 
