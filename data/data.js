@@ -52,7 +52,7 @@ const DAJOUR = {
       id: "resume",
       icon: "file-text-fill",
       title: "Resume",
-      link: "https://drive.google.com/file/d/1duToIYgfSe2P5wq24tgrs5H3CShJn2KD/view?usp=drive_link"
+      link: "https://drive.google.com/file/d/1MxDylc5Bt6hMMHR_s1iZlj8qktBAc6Ur/view?usp=sharing"
     }
   ],
 
@@ -63,24 +63,31 @@ const DAJOUR = {
       {
         id: "stellartaiapp",
         image: "/data/images/stellartaiapp.png",
-        title: "Stellar Art AI",
-        category: ["Stable Diffusion", "MERN"],
+        title: "Stellart AI",
+        category: ["Stable Diffusion", "Vite", "Tailwind CSS"],
         link: "https://app.stellartai.com"
       },
       {
         id: "imgnaiapp",
         image: "/data/images/imgnaiapp.png",
-        title: "ImgnAI App",
+        title: "Nai",
         category: ["Stable Diffusion", "MERN"],
         link: "https://app.imgnai.com"
+      },
+      {
+        id: "Abrahbrownagency",
+        image: "/data/images/abrahbrownagency.png",
+        category: ["Go"],
+        title: "Abrahbrown Agency",
+        link: "https://www.abrahbrownagency.com/"
       },
       {
         id: "chatwithfiles",
         image:
           "https://raw.githubusercontent.com/guangzhengli/ChatFiles/main/doc/chatfiles.png",
-        category: ["OpenAI", "Next.js"],
-        title: "Chat With Files",
-        link: "https://chatbot.impactbuilder.app"
+        category: ["OpenAI", "Next.js", "Tailwind CSS"],
+        title: "Impact Chatbot",
+        link: "https://www.chatbot.impactbuilder.app/"
       }
     ]
   },
