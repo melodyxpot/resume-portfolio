@@ -125,13 +125,8 @@ const DAJOUR = {
     ],
     employments: [
       {
-        title: "Senior Full Stack Engineer",
-        company: "StellarArt AI",
-        date: "2023 - Present"
-      },
-      {
-        title: "Backend Software Engineer",
-        company: "The Impact Positive Company",
+        title: "Backend Engineer",
+        company: "Mental Load",
         date: "2023 - Present"
       },
       {
